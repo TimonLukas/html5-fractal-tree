@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HTML5 Fractal Tree</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <form id="form">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="size-x">Size:</label>
+                <input type="number" id="size-x" class="form-control mx-sm-3"
+                       placeholder="1024" value="800" required>
+            </div>
+            &times;
+            <div class="form-group">
+                <input type="number" id="size-y" class="form-control mx-sm-3"
+                       placeholder="768" value="800" required>
+            </div>
+            <div class="form-group">
+                <label for="depth-branch">Depth:</label>
+                <input type="number" id="depth-branch" class="form-control mx-sm-3"
+                       placeholder="10" value="10" min="0" required>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="color-background">Background color:</label>
+                <input type="text" id="color-background" class="form-control mx-sm-3"
+                       placeholder="#555555" value="#555555" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" required>
+            </div>
+            <div class="form-group">
+                <label for="color-background">Branch color:</label>
+                <input type="text" id="color-branch" class="form-control mx-sm-3"
+                       placeholder="#FFFFFF" value="#FFFFFF" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" required>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="length-branch">Branch length (px):</label>
+                <input type="number" id="length-branch" class="form-control mx-sm-3"
+                       placeholder="100" value="100" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="length-branch-variation">Branch length variation (+- %):</label>
+                <input type="number" id="length-branch-variation" class="form-control mx-sm-3"
+                       placeholder="10" value="10" min="0" required>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="length-branch-falloff">Branch length falloff (%):</label>
+                <input type="number" id="length-branch-falloff" class="form-control mx-sm-3"
+                       placeholder="80" value="80" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="angle-branch">Branch angle (°):</label>
+                <input type="number" id="angle-branch" class="form-control mx-sm-3"
+                       placeholder="23" value="23" min="0" max="179" required>
+            </div>
+            <div class="form-group">
+                <label for="angle-branch-variation">Branch angle variation (+- %):</label>
+                <input type="number" id="angle-branch-variation" class="form-control mx-sm-3"
+                       placeholder="5" value="5" min="0" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Draw</button>
+    </form>
+</div>
+<canvas id="canvas"></canvas>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+<script src="App.js"></script>
+</body>
+</html>

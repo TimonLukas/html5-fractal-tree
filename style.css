@@ -1,0 +1,12 @@
+body {
+    padding-top: 1rem;
+}
+
+.form-inline {
+    margin-bottom: 1rem;
+}
+
+#canvas {
+    display: block;
+    margin: 1rem auto;
+}
